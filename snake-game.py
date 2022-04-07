@@ -50,8 +50,8 @@ score = 0
 
 # Game Over
 def game_over():
-    my_font = pygame.font.SysFont('times new roman', 90)
-    game_over_surface = my_font.render('YOU DIED', True, red)
+    my_font = pygame.font.SysFont('times new roman', 50)
+    game_over_surface = my_font.render('YOU SUCK LOL, GIT GUD', True, red)
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (frame_size_x/2, frame_size_y/4)
     game_window.fill(black)
@@ -131,7 +131,7 @@ while True:
     food_spawn = True
 
     # GFX
-    game_window.fill(black)
+    game_window.fill(white)
     for pos in snake_body:
         # Snake body
         # .draw.rect(play_surface, color, xy-coordinate)
@@ -139,7 +139,7 @@ while True:
         pygame.draw.rect(game_window, green, pygame.Rect(pos[0], pos[1], 10, 10))
 
     # Snake food
-    pygame.draw.rect(game_window, white, pygame.Rect(food_pos[0], food_pos[1], 10, 10))
+    pygame.draw.rect(game_window, red, pygame.Rect(food_pos[0], food_pos[1], 10, 10))
 
     # Game Over conditions
     # Getting out of bounds
@@ -152,7 +152,7 @@ while True:
         if snake_pos[0] == block[0] and snake_pos[1] == block[1]:
             game_over()
 
-    show_score(1, white, 'consolas', 20)
+    show_score(1, red, 'consolas', 20)
     # Refresh game screen
     pygame.display.update()
     # Refresh rate
