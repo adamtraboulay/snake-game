@@ -131,7 +131,7 @@ while True:
     food_spawn = True
 
     # GFX
-    game_window.fill(white)
+    game_window.fill(black)
     for pos in snake_body:
         # Snake body
         # .draw.rect(play_surface, color, xy-coordinate)
