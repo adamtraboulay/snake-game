@@ -19,7 +19,7 @@ else:
 
 
 # Initialise game window
-pygame.display.set_caption("Adam's snake game")
+pygame.display.set_caption("Snek Game")
 game_window = pygame.display.set_mode((frame_size_x, frame_size_y))
 
 
